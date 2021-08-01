@@ -1,0 +1,135 @@
+.main-heading {
+    text-align: center;
+    font-weight: 600;
+}
+
+
+/*trying for toggling to dark mode*/
+.dark_mode {
+  background-color: black;
+  color: white;
+}
+
+.light_mode{
+    background-color: white;
+    color: black;
+}
+
+/* styling of main-calculator */
+
+#main-calculator {
+    text-align: center;
+    padding: 20px;
+    width: 20%;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background: rgba( 182, 169, 169, 0.40 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4.5px );
+    -webkit-backdrop-filter: blur( 4.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+@media screen and (max-width: 540px){
+    #main-calculator{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 375px){
+    #main-calculator{
+        margin-top: 25px;
+    }
+}
+
+
+/* styling of calculator  */
+
+
+/* styling of main screen */
+
+#screen {
+    margin-top: 3px;
+    width: 100%;
+    border: none;
+}
+
+
+/*trying to remove spacing form row*/
+
+.row {
+    --bs-gutter-x: 0rem !important;
+    height: 50px;
+}
+
+
+/* styling of columns in calculator */
+
+.col {
+    border: 1px solid #000;
+    overflow: hidden;
+}
+
+
+/*styling of buttons*/
+
+button {
+    width: inherit;
+    height: 50px;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+
+/*styling of hovering effect on buttons*/
+
+button:hover {
+    
+    box-shadow: 2px 2px 2px #ccc;
+    opacity: 0.8;
+}
+
+
+
+
+/*styling of AC button to make it different from others*/
+
+#bg-red {
+    background: rgb(172, 57, 57);
+    color: #ccc;
+    width: 100%;
+}
+
+
+/*styling of operations buttons to kinda highlight them*/
+
+#bg-silver {
+    background: rgb(102, 102, 102);
+}
+
+
+/*styling of equal-to button to make it stand out*/
+
+#bg-blue {
+    background: rgb(0, 68, 102);
+    width: 100%;
+    height: 100%;
+}
+
+
+/*styling of digit buttons*/
+
+#bg-black {
+    background: #4d4d4d;
+}
+
+
+/*styling of calculator-buttons*/
+
+.calculator-buttons {
+    margin-top: 5px;
+}
