@@ -1,6 +1,7 @@
 let screen = document.getElementById('screen');
 buttons = document.querySelectorAll('button');
 let screenValue = '';
+document.querySelector('body').style.backgroundColor = change();
 for (item of buttons) {
     item.addEventListener('click', (e) => {
         buttonText = e.target.innerText;
@@ -15,11 +16,7 @@ for (item of buttons) {
             screen.value = screenValue;
         } else if (buttonText == '=') {
             screen.value = eval(screenValue);
-        }
-        
-        
-        
-        else {
+        } else {
             screenValue += buttonText;
             screen.value = screenValue;
         }
@@ -27,4 +24,13 @@ for (item of buttons) {
     })
 }
 
+function change() {
+    var r = Math.floor(Math.random() * 255)
+    var g = Math.floor(Math.random() * 255)
+    var b = Math.floor(Math.random() * 255)
+    var a = Math.floor(Math.random() * 10)
+    var mycolor = "rgba(" + r + "," + g + "," + b + "," + a + ")";
 
+    return mycolor;
+
+}
