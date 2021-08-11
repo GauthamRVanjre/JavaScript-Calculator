@@ -1,19 +1,43 @@
+/* header part  */
+
+#header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .main-heading {
     text-align: center;
     font-weight: 600;
+    animation-name: fade-in;
+    animation-timing-function: ease-out;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateX(-600px);
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 
 /*trying for toggling to dark mode*/
+
 .dark_mode {
-  background-color: black;
-  color: white;
+    background-color: black;
+    color: white;
 }
 
-.light_mode{
+.light_mode {
     background-color: white;
     color: black;
 }
+
 
 /* styling of main-calculator */
 
@@ -22,26 +46,39 @@
     padding: 20px;
     width: 20%;
     position: absolute;
+    animation-name: fade-in;
+    animation-timing-function: ease-in;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-
-    background: rgba( 182, 169, 169, 0.40 );
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 4.5px );
-    -webkit-backdrop-filter: blur( 4.5px );
+    background: rgba( 182, 169, 169, 0.40);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
+    backdrop-filter: blur( 4.5px);
+    -webkit-backdrop-filter: blur( 4.5px);
     border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border: 1px solid rgba( 255, 255, 255, 0.18);
 }
 
-@media screen and (max-width: 540px){
-    #main-calculator{
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateX(-60px);
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    #main-calculator {
         width: 60%;
     }
 }
 
-@media screen and (max-width: 375px){
-    #main-calculator{
+@media screen and (max-width: 375px) {
+    #main-calculator {
         margin-top: 25px;
     }
 }
@@ -88,12 +125,9 @@ button {
 /*styling of hovering effect on buttons*/
 
 button:hover {
-    
     box-shadow: 2px 2px 2px #ccc;
     opacity: 0.8;
 }
-
-
 
 
 /*styling of AC button to make it different from others*/
