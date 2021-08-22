@@ -46,10 +46,6 @@
     padding: 20px;
     width: 20%;
     position: absolute;
-    animation-name: fade-in;
-    animation-timing-function: ease-in;
-    animation-duration: 1.5s;
-    animation-iteration-count: 1;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
